@@ -27,7 +27,7 @@
 * Jan Kunigk (Senior Solutions Architect) - jqnik
 * Please introduce yourselves:
     * Giorgio
-    * Italy - Data Engineer
+    * Italy - Junior Data Engineer
     * I have started working with the Cloudera Hadoop ecosystem since March 2016. I have been focusing most of my time in these topic since that time. At the moment managing and designing small-sized cluster (around 20 nodes).
 
 ---
