@@ -26,9 +26,9 @@
 * Michael Ernest (Senior Learning Architect) - mfernest
 * Jan Kunigk (Senior Solutions Architect) - jqnik
 * Please introduce yourselves:
-    * Name
-    * Region & Role
-    * Your experience with Hadoop to date
+    * Giorgio
+    * Italy - Data Engineer
+    * I have started working with the Cloudera Hadoop ecosystem since March 2016. I have been focusing most of my time in these topic since that time. At the moment managing and designing small-sized cluster (around 20 nodes).
 
 ---
 <div style="page-break-after: always;"></div>
