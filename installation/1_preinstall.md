@@ -91,6 +91,45 @@ Name:	ip-172-31-21-144.eu-central-1.compute.internal
 Address: 172.31.21.144
 
 
+[ec2-user@ip-172-31-21-145 ~]$ nslookup 172.31.21.142
+Server:		172.31.0.2
+Address:	172.31.0.2#53
+
+Non-authoritative answer:
+142.21.31.172.in-addr.arpa	name = ip-172-31-21-142.eu-central-1.compute.internal.
+
+Authoritative answers can be found from:
+
+[ec2-user@ip-172-31-21-145 ~]$ nslookup 172.31.21.143
+Server:		172.31.0.2
+Address:	172.31.0.2#53
+
+Non-authoritative answer:
+143.21.31.172.in-addr.arpa	name = ip-172-31-21-143.eu-central-1.compute.internal.
+
+Authoritative answers can be found from:
+
+[ec2-user@ip-172-31-21-145 ~]$ nslookup 172.31.21.144
+Server:		172.31.0.2
+Address:	172.31.0.2#53
+
+Non-authoritative answer:
+144.21.31.172.in-addr.arpa	name = ip-172-31-21-144.eu-central-1.compute.internal.
+
+Authoritative answers can be found from:
+
+[ec2-user@ip-172-31-21-145 ~]$ nslookup 172.31.21.145
+Server:		172.31.0.2
+Address:	172.31.0.2#53
+
+Non-authoritative answer:
+145.21.31.172.in-addr.arpa	name = ip-172-31-21-145.eu-central-1.compute.internal.
+
+Authoritative answers can be found from:
+
+
+
+
 
 
 
