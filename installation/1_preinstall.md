@@ -28,7 +28,7 @@ sysfs                   /sys                    sysfs   defaults        0 0
 proc                    /proc                   proc    defaults        0 0
 
 
-[ec2-user@ip-172-31-21-145 ~]$ df -hP
+[ec2-user@ip-172-31-21-145 ~]$ df -h
 
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1      9.8G  1.7G  7.6G  19% /
@@ -49,6 +49,28 @@ Kernel Interface table
 Iface       MTU Met    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       9001   0     1608      0      0      0     1366      0      0      0 BMRU
 lo        65536   0        0      0      0      0        0      0      0      0 LRU
+
+
+[ec2-user@ip-172-31-21-145 ~]$ ifconfig 
+eth0      Link encap:Ethernet  HWaddr 06:84:28:5F:68:05  
+          inet addr:172.31.21.145  Bcast:172.31.31.255  Mask:255.255.240.0
+          inet6 addr: fe80::484:28ff:fe5f:6805/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:9001  Metric:1
+          RX packets:55451 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:11353 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:77932950 (74.3 MiB)  TX bytes:997117 (973.7 KiB)
+          Interrupt:145 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
 
 ##Getent forward and reverse lookups
 
