@@ -27,7 +27,7 @@ do
 	echo RED_MB $RED_MB
 	echo Mappers $i
 	echo Reducers $j
-	echo Max Heap Map Memory MB $k
+	echo Max Container Memory MB $k
 
 	echo teragen
         time $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar teragen \
