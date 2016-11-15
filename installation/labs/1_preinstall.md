@@ -1,18 +1,18 @@
 #Checking swappiness
+```
 cat /proc/sys/vm/swappiness
-
 60
-
+```
 Temporarily setting it to value of 1.
-
+```
 sudo sysctl vm.swappiness=1
-
+```
 Set vm.swappiness to 1 in a permanet way.
-
+```
 sudo vi /etc/sysctl.conf and add line vm.swappiness=1
-
+```
 #Checking volumes
-
+```
 cat /etc/fstab
 
 /etc/fstab
@@ -33,16 +33,16 @@ proc                    /proc                   proc    defaults        0 0
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1      9.8G  1.7G  7.6G  19% /
 tmpfs           7.3G     0  7.3G   0% /dev/shm
-
+```
 
 #Showing that Transparent Huge page is disabled
-
+```
 cat /sys/kernel/mm/redhat_transparent_hugepage/defrag
 
 always madvise [never]
-
+```
 #Checking Network interfaces
-
+```
 [ec2-user@ip-172-31-21-145 ~]$ netstat -i
 
 Kernel Interface table
@@ -70,10 +70,10 @@ lo        Link encap:Local Loopback
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:0 
           RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
-
+```
 
 ##Getent forward and reverse lookups
-
+```
 [ec2-user@ip-172-31-21-145 ~]$ getent ahosts ip-172-31-21-145.eu-central-1.compute.internal
 172.31.21.145   STREAM ip-172-31-21-145.eu-central-1.compute.internal
 172.31.21.145   DGRAM  
@@ -123,10 +123,10 @@ lo        Link encap:Local Loopback
 172.31.21.145   STREAM 172.31.21.145
 172.31.21.145   DGRAM  
 172.31.21.145   RAW   
-
+```
 
 ##Nslookup forward and reverse checks
-
+```
 nslookup ip-172-31-21-145.eu-central-1.compute.internal
 Server:		172.31.0.2
 Address:	172.31.0.2#53
@@ -203,18 +203,18 @@ Non-authoritative answer:
 145.21.31.172.in-addr.arpa	name = ip-172-31-21-145.eu-central-1.compute.internal.
 
 Authoritative answers can be found from:
-
+```
 
 #Verify the nscd service is running
-
+```
 [ec2-user@ip-172-31-21-145 ~]$ service nscd status
 nscd (pid 24378) is running...
-
+```
 #Verify the ntpd service is running
-
+```
 [ec2-user@ip-172-31-21-145 ~]$ service ntpd status
 ntpd (pid  24460) is running...
-
+```
 
 
 
