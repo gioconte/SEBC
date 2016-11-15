@@ -25,7 +25,7 @@ do
 	
 	echo MAP_MB $MAP_MB
 	echo RED_MB $RED_MB
-	echo Mappers $1
+	echo Mappers $i
 	echo Reducers $j
 	echo Max Heap Map Memory MB $k
 
@@ -33,7 +33,7 @@ do
                      -Dmapreduce.job.maps=$i \
                      -Dmapreduce.map.memory.mb=$k \
                      -Dmapreduce.map.java.opts.max.heap=$MAP_MB \
-                     100000 /user/ec2-user/results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err                       
+                     53687091 /user/ec2-user/results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err                       
 
        time $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar terasort \
                      -Dmapreduce.job.maps=$i \
