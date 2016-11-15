@@ -59,3 +59,47 @@ Created user and folder and run teragen test with 500Mb
 		Bytes Written=500000000
 
 ```
+
+Copy Data to another cluster
+Need a peer
+
+
+Check that paths are healthy.
+
+```
+ec2-user@ip-172-31-22-224 ~]$ hdfs fsck /user/gioconte/ -files -blocks
+Connecting to namenode via http://ip-172-31-19-14.eu-central-1.compute.internal:50070
+FSCK started by ec2-user (auth:SIMPLE) from /172.31.22.224 for path /user/gioconte/ at Tue Nov 15 15:07:41 EST 2016
+/user/gioconte/ <dir>
+/user/gioconte/terag_data <dir>
+/user/gioconte/terag_data/_SUCCESS 0 bytes, 0 block(s):  OK
+
+/user/gioconte/terag_data/part-m-00000 500000000 bytes, 4 block(s):  OK
+0. BP-403364897-172.31.19.14-1479230296120:blk_1073742552_1728 len=134217728 Live_repl=3
+1. BP-403364897-172.31.19.14-1479230296120:blk_1073742553_1729 len=134217728 Live_repl=3
+2. BP-403364897-172.31.19.14-1479230296120:blk_1073742554_1730 len=134217728 Live_repl=3
+3. BP-403364897-172.31.19.14-1479230296120:blk_1073742555_1731 len=97346816 Live_repl=3
+
+Status: HEALTHY
+ Total size:	500000000 B
+ Total dirs:	2
+ Total files:	2
+ Total symlinks:		0
+ Total blocks (validated):	4 (avg. block size 125000000 B)
+ Minimally replicated blocks:	4 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Number of data-nodes:		3
+ Number of racks:		1
+FSCK ended at Tue Nov 15 15:07:41 EST 2016 in 4 milliseconds
+
+
+The filesystem under path '/user/gioconte/' is HEALTHY
+```
+
+
