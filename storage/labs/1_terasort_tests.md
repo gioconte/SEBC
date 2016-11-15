@@ -90,3 +90,107 @@ user	2m12.218s
 sys	0m10.896s
 ```
 
+
+Running Terasort on the data previously generated
+
+```
+time hadoop jar /opt/cloudera/parcels/CDH-5.8.2-1.cdh5.8.2.p0.3/jars/hadoop-examples.jar terasort /user/gioconte/terag_10g /user/gioconte/sorted_10g
+16/11/15 15:25:20 INFO terasort.TeraSort: starting
+16/11/15 15:25:21 INFO input.FileInputFormat: Total input paths to process : 1
+Spent 281ms computing base-splits.
+Spent 8ms computing TeraScheduler splits.
+Computing input splits took 290ms
+Sampling 10 splits of 320
+Making 1 from 100000 sampled records
+Computing parititions took 679ms
+Spent 972ms computing partitions.
+16/11/15 15:25:22 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+16/11/15 15:25:22 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+16/11/15 15:25:23 INFO mapreduce.JobSubmitter: number of splits:320
+16/11/15 15:25:23 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local983393903_0001
+16/11/15 15:25:23 INFO mapred.LocalDistributedCacheManager: Creating symlink: /tmp/hadoop-gioconte/mapred/local/1479242303310/_partition.lst <- /home/gioconte/_partition.lst
+16/11/15 15:25:23 INFO mapred.LocalDistributedCacheManager: Localized hdfs://ip-172-31-19-14.eu-central-1.compute.internal:8020/user/gioconte/sorted_tmp/_partition.lst as file:/tmp/hadoop-gioconte/mapred/local/1479242303310/_partition.lst
+16/11/15 15:25:23 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+16/11/15 15:25:23 INFO mapreduce.Job: Running job: job_local16547925_0001
+16/11/15 15:25:23 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+16/11/15 15:25:23 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+16/11/15 15:25:23 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+16/11/15 15:25:23 INFO mapred.LocalJobRunner: Starting task: attempt_local16547925_0001_m_000000_0
+16/11/15 15:25:23 INFO mapred.LocalJobRunner: Waiting for map tasks
+16/11/15 15:25:23 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+16/11/15 15:25:23 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+16/11/15 15:25:23 INFO mapred.MapTask: Processing split: hdfs://ip-172-31-19-14.eu-central-1.compute.internal:8020/user/gioconte/terag_10g/part-m-00000:0+33554432
+16/11/15 15:25:23 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+16/11/15 15:25:23 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+16/11/15 15:25:23 INFO mapred.MapTask: soft limit at 83886080
+16/11/15 15:25:23 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+16/11/15 15:25:23 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+16/11/15 15:25:23 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+16/11/15 15:25:24 INFO mapred.LocalJobRunner: 
+16/11/15 15:25:24 INFO mapred.MapTask: Starting flush of map output
+16/11/15 15:25:24 INFO mapred.MapTask: Spilling map output
+16/11/15 15:25:24 INFO mapred.MapTask: bufstart = 0; bufend = 34225590; bufvoid = 104857600
+16/11/15 15:25:24 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 24872220(99488880); length = 1342177/6553600
+16/11/15 15:25:24 INFO mapreduce.Job: Job job_local16547925_0001 running in uber mode : false
+16/11/15 15:25:24 INFO mapreduce.Job:  map 0% reduce 0%
+
+16/11/15 15:36:44 INFO mapreduce.Job:  map 100% reduce 99%
+16/11/15 15:36:47 INFO mapred.LocalJobRunner: reduce > reduce
+16/11/15 15:36:50 INFO mapred.LocalJobRunner: reduce > reduce
+16/11/15 15:36:50 INFO mapreduce.Job:  map 100% reduce 100%
+16/11/15 15:36:50 INFO mapred.Task: Task:attempt_local16547925_0001_r_000000_0 is done. And is in the process of committing
+16/11/15 15:36:51 INFO mapred.LocalJobRunner: reduce > reduce
+16/11/15 15:36:51 INFO mapred.Task: Task attempt_local16547925_0001_r_000000_0 is allowed to commit now
+16/11/15 15:36:51 INFO output.FileOutputCommitter: Saved output of task 'attempt_local16547925_0001_r_000000_0' to hdfs://ip-172-31-19-14.eu-central-1.compute.internal:8020/user/gioconte/sorted_10g/_temporary/0/task_local16547925_0001_r_000000
+16/11/15 15:36:51 INFO mapred.LocalJobRunner: reduce > reduce
+16/11/15 15:36:51 INFO mapred.Task: Task 'attempt_local16547925_0001_r_000000_0' done.
+16/11/15 15:36:51 INFO mapred.LocalJobRunner: Finishing task: attempt_local16547925_0001_r_000000_0
+16/11/15 15:36:51 INFO mapred.LocalJobRunner: reduce task executor complete.
+16/11/15 15:36:51 INFO mapreduce.Job: Job job_local16547925_0001 completed successfully
+16/11/15 15:36:51 INFO mapreduce.Job: Counters: 35
+	File System Counters
+		FILE: Number of bytes read=33557947065
+		FILE: Number of bytes written=1825727387169
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1737303062200
+		HDFS: Number of bytes written=10737418200
+		HDFS: Number of read operations=111388
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=644
+	Map-Reduce Framework
+		Map input records=107374182
+		Map output records=107374182
+		Map output bytes=10952166564
+		Map output materialized bytes=11166916848
+		Input split bytes=50880
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=107374182
+		Reduce shuffle bytes=11166916848
+		Reduce input records=107374182
+		Reduce output records=107374182
+		Spilled Records=319438188
+		Shuffled Maps =320
+		Failed Shuffles=0
+		Merged Map outputs=320
+		GC time elapsed (ms)=45019
+		Total committed heap usage (bytes)=85532344320
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=10737418200
+	File Output Format Counters 
+		Bytes Written=10737418200
+16/11/15 15:36:51 INFO terasort.TeraSort: done
+
+real	13m24.340s
+user	12m14.493s
+sys	1m42.692s
+```
