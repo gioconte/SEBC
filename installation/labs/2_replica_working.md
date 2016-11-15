@@ -51,5 +51,63 @@ Installed MySQL JDBC
 [ec2-user@ip-172-31-21-143 tmp]$ tar -zxvf mysql-connector-java-5.1.40.tar.gz
 sudo cp mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /usr/share/java/mysql-connector-java.jar
 ```
+Craeating all the databases needed for CM, Hue and Oozie
+```
+mysql> create database amon DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
 
+mysql> grant all on amon.* TO 'amon'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+mysql> create database rman DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> create database metastore DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> create database sentry DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> create database nav DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on nav.* TO 'nav'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> create database navms DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on navms.* TO 'navms'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+mysql> create database hue DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on hue.* TO 'hue'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> create database oozie DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on oozie.* TO 'oozie'@'%' IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> exit
+```
 
