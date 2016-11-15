@@ -29,13 +29,13 @@ do
 	echo Reducers $j
 	echo Max Heap Map Memory MB $k
 
-        $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar teragen \
+        time $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar teragen \
                      -Dmapreduce.job.maps=$i \
                      -Dmapreduce.map.memory.mb=$k \
                      -Dmapreduce.map.java.opts.max.heap=$MAP_MB \
                      100000 /user/ec2-user/results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err                       
 
-       $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar terasort \
+       time $HADOOP_PATH/hadoop jar $HADOOP_MR/hadoop-examples.jar terasort \
                      -Dmapreduce.job.maps=$i \
                      -Dmapreduce.job.reduces=$j \
                      -Dmapreduce.map.memory.mb=$k \
@@ -45,8 +45,8 @@ do
 	             /user/ec2-user/results/tg-10GB-${i}-${j}-${k}  \
                      /user/ec2-user/results/ts-10GB-${i}-${j}-${k} 1>>tera_${i}_${j}_${k}.out 2>>tera_${i}_${j}_${k}.err                         
 
-        $HADOOP_PATH/hadoop fs -rm -r -skipTrash /results/tg-10GB-${i}-${j}-${k}                         
-        $HADOOP_PATH/hadoop fs -rm -r -skipTrash /results/ts-10GB-${i}-${j}-${k}                 
+        $HADOOP_PATH/hadoop fs -rm -r -skipTrash /user/ec2-user/results/tg-10GB-${i}-${j}-${k}                         
+        $HADOOP_PATH/hadoop fs -rm -r -skipTrash /user/ec2-user/results/ts-10GB-${i}-${j}-${k}                 
       done
    done
 done
