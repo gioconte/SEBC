@@ -43,17 +43,16 @@ Stop and start hive service.
     "clusterName" : "cluster",
     "serviceName" : "hive"
   }
-}[root@localhost tmp]# curl -u admin:admin -X POST 'http://54.93.218.251:7180/api/v13/clusters/gioconte/services/hive/commands/start'
+}
+[root@localhost tmp]# curl -u admin:admin -X POST 'http://54.93.218.251:7180/api/v13/clusters/gioconte/services/hive/commands/start'
 {
-  "id" : 478,
+  "id" : 480,
   "name" : "Start",
-  "startTime" : "2016-11-16T11:05:27.660Z",
-  "endTime" : "2016-11-16T11:05:27.660Z",
-  "active" : false,
-  "success" : false,
-  "resultMessage" : "Command Start is not currently available for execution.",
+  "startTime" : "2016-11-16T12:51:04.927Z",
+  "active" : true,
   "serviceRef" : {
     "clusterName" : "cluster",
     "serviceName" : "hive"
   }
-}```
+}
+```
