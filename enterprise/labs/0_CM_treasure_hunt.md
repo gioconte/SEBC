@@ -4,6 +4,19 @@ Ubertasks optimization runs "sufficiently small" jobs sequentially within a sing
 The Kerberos Security Realm value is displayed here:
 `Administration -> Settings -> Kerberos -> Kerberos Security Realm`
 3. Which CDH service(s) host a property for enabling Kerberos authentication?
+  - Flume 
+  - HBase 
+  - HCatalog 
+  - Hive 
+  - HttpFS 
+  - Hue 
+  - Impala 
+  - Llama 
+  - Oozie 
+  - Solr 
+  - Spark 
+  - Sqoop 
+  - ZooKeeper 
 
 4. How do you upgrade the CM agents?
 You need first to upgrade the cloudera manager Server. Once the CM server is upgrade and restarted a wizard pops up to upgrade the cloudera manager agents and optionally the JDK
@@ -22,3 +35,4 @@ You need first to upgrade the cloudera manager Server. Once the CM server is upg
   - Install `MIT KDC` or use the `Active Directory KDC`
   - Create Kerberos Principal for the Cloudera Manager Server
   - Configure the KDC to allow renewable tickets with non-zero ticket lifetimes. Active Directory KDC allows it by default
+  - Start the Wizard for Kerberos Integration
