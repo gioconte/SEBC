@@ -56,3 +56,5 @@ done
 echo Testing loop ended on `date`
 
 ``` 
+
+Note: Creating just 5GB of data for capacity reason
