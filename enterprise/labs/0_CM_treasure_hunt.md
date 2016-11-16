@@ -10,10 +10,15 @@ You need first to upgrade the cloudera manager Server. Once the CM server is upg
 
 5. Give the tsquery statement used to chart Hue's CPU utilization?
 
+
 6. Name all the roles that make up the Hive service
   - Hive Server2
   - Hive Metastore Server
-  - WebHcat Server
+  - WebHcat Server 
   - Hive Gateway (just configuration flies for the clients, no active role)
 
 7. What steps must be completed before integrating Cloudera Manager with Kerberos?
+  - Install `openldap-clients` on the Cloudera Manager Server host. Install `krb5-workstation` `krb5-libs` on ALL hosts
+  - Install `MIT KDC` or use the `Active Directory KDC`
+  - Create Kerberos Principal for the Cloudera Manager Server
+  - Configure the KDC to allow renewable tickets with non-zero ticket lifetimes. Active Directory KDC allows it by default
