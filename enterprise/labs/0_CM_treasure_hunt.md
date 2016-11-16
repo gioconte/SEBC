@@ -22,7 +22,7 @@ The Kerberos Security Realm value is displayed here:
 You need first to upgrade the cloudera manager Server. Once the CM server is upgrade and restarted a wizard pops up to upgrade the cloudera manager agents and optionally the JDK
 
 5. Give the tsquery statement used to chart Hue's CPU utilization?
-SELECT cpu_system_rate, cpu_user_rate where serviceName='hue'
+`SELECT cpu_system_rate, cpu_user_rate where serviceName='hue'`
 
 6. Name all the roles that make up the Hive service
   - Hive Server2
