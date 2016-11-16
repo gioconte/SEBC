@@ -89,3 +89,28 @@ INFO  : OK
 +------------+--+
 4 rows selected (0.235 seconds)
 ```
+#Creating Linux user on hosts and adding principal
+
+```
+[ec2-user@ip-172-31-22-224 ~]$ sudo groupadd selector
+[ec2-user@ip-172-31-22-224 ~]$ sudo groupadd inserters
+[ec2-user@ip-172-31-22-224 ~]$ sudo useradd -u 1100 -g selector george
+[ec2-user@ip-172-31-22-224 ~]$ sudo useradd -u 1200 -g inserters ferdinand
+[ec2-user@ip-172-31-22-224 ~]$ 
+[ec2-user@ip-172-31-22-224 ~]$ kadmin.local: add_principal george
+-bash: kadmin.local:: command not found
+[ec2-user@ip-172-31-22-224 ~]$ sudo kadmin.local: add_principal george
+sudo: kadmin.local:: command not found
+[ec2-user@ip-172-31-22-224 ~]$ sudo /usr/sbin/kadmin.local -q "addprinc george"
+Authenticating as principal root/admin@MOVIRI.COM with password.
+WARNING: no policy specified for george@MOVIRI.COM; defaulting to no policy
+Enter password for principal "george@MOVIRI.COM": 
+Re-enter password for principal "george@MOVIRI.COM": 
+Principal "george@MOVIRI.COM" created.
+[ec2-user@ip-172-31-22-224 ~]$ sudo /usr/sbin/kadmin.local -q "addprinc ferdinand"
+Authenticating as principal root/admin@MOVIRI.COM with password.
+WARNING: no policy specified for ferdinand@MOVIRI.COM; defaulting to no policy
+Enter password for principal "ferdinand@MOVIRI.COM": 
+Re-enter password for principal "ferdinand@MOVIRI.COM": 
+Principal "ferdinand@MOVIRI.COM" created.
+```
