@@ -72,8 +72,6 @@ Scheduled the replication
 
 Replication is not working. Probably because hosts are not able to do reverse lookups from the private IP.
 
-![alt text](https://github.com/gioconte/SEBC/blob/master/storage/labs/bdr_error.png "BDR Fails")
-
 
 Check that paths are healthy.
 
