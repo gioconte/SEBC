@@ -1,3 +1,5 @@
+Connecting with beeline
+
 ```
 [ec2-user@ip-172-31-22-224 ~]$ beeline
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
@@ -40,7 +42,7 @@ INFO  : Completed executing command(queryId=hive_20161116174646_8237c61f-310f-46
 INFO  : OK
 No rows affected (0.533 seconds)
 ```
-grant on server
+Grant on server
 ```
 0: jdbc:hive2://172.31.19.14:10000/default> GRANT ALL ON SERVER server1 TO ROLE sentry_admin;
 INFO  : Compiling command(queryId=hive_20161116174646_f34e9d41-ff7d-4925-a434-f8ea0b0ef94d): GRANT ALL ON SERVER server1 TO ROLE sentry_admin
@@ -114,3 +116,7 @@ Enter password for principal "ferdinand@MOVIRI.COM":
 Re-enter password for principal "ferdinand@MOVIRI.COM": 
 Principal "ferdinand@MOVIRI.COM" created.
 ```
+
+
+
+
