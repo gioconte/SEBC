@@ -26,6 +26,7 @@ Set TLS path file to keystore and set the password in CM.
 
 Restart cloudera manager
 
-Than enable TLS Encryption in CM
-restart both cloudera manager server and cloudera manager server!
+Than enable TLS Encryption in CM.
+
+Restart both cloudera manager server and cloudera manager agents on all hosts!
 
