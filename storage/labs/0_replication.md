@@ -63,7 +63,7 @@ Created user and folder and run teragen test with 500Mb
 
 Adding peer in cloudera Manager
 
-![alt text](https://github.com/gioconte/SEBC/edit/master/storage/labs/add_peer.png "Adding Peer")
+![](https://github.com/gioconte/SEBC/edit/master/storage/labs/add_peer.png)
 
 Scheduled the replication
 
