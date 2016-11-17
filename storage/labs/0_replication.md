@@ -63,16 +63,16 @@ Created user and folder and run teragen test with 500Mb
 
 Adding peer in cloudera Manager
 
-![](https://github.com/gioconte/SEBC/edit/master/storage/labs/add_peer.png)
+![](https://github.com/gioconte/SEBC/blob/master/storage/labs/add_peer.png)
 
 Scheduled the replication
 
-![alt text](https://github.com/gioconte/SEBC/edit/master/storage/labs/add_replication.png "Adding Replication")
+![alt text](https://github.com/gioconte/SEBC/blob/master/storage/labs/add_replication.png "Adding Replication")
 
 
 Replication is not working. Probably because hosts are not able to do reverse lookups from the private IP.
 
-![alt text](https://github.com/gioconte/SEBC/edit/master/storage/labs/bdr_error.png "BDR Fails")
+![alt text](https://github.com/gioconte/SEBC/blob/master/storage/labs/bdr_error.png "BDR Fails")
 
 
 Check that paths are healthy.
