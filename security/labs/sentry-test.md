@@ -117,6 +117,75 @@ Re-enter password for principal "ferdinand@MOVIRI.COM":
 Principal "ferdinand@MOVIRI.COM" created.
 ```
 
+#Testing Sentry with test users.
 
+Testing `George`
 
+```
+[george@ip-172-31-22-224 ~]$ kinit
+Password for george@MOVIRI.COM: 
+[george@ip-172-31-22-224 ~]$ beeline
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+Beeline version 1.1.0-cdh5.8.2 by Apache Hive
+beeline> !connect jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM
+scan complete in 3ms
+Connecting to jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM
+Enter username for jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM: 
+Enter password for jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM: 
+Connected to: Apache Hive (version 1.1.0-cdh5.8.2)
+Driver: Hive JDBC (version 1.1.0-cdh5.8.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://172.31.19.14:10000/default> SHOW TABLES;
+INFO  : Compiling command(queryId=hive_20161117031212_4dcc922d-fe35-4929-a5c4-0292f5b2653e): SHOW TABLES
+INFO  : Semantic Analysis Completed
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20161117031212_4dcc922d-fe35-4929-a5c4-0292f5b2653e); Time taken: 0.045 seconds
+INFO  : Executing command(queryId=hive_20161117031212_4dcc922d-fe35-4929-a5c4-0292f5b2653e): SHOW TABLES
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20161117031212_4dcc922d-fe35-4929-a5c4-0292f5b2653e); Time taken: 0.098 seconds
+INFO  : OK
++------------+--+
+|  tab_name  |
++------------+--+
+| customers  |
+| sample_07  |
+| sample_08  |
+| web_logs   |
++------------+--+
+4 rows selected (0.292 seconds)
+```
 
+Testing `Ferdinand`
+
+```
+[ferdinand@ip-172-31-22-224 ~]$ kinit
+Password for ferdinand@MOVIRI.COM: 
+[ferdinand@ip-172-31-22-224 ~]$ beeline
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+Beeline version 1.1.0-cdh5.8.2 by Apache Hive
+beeline> !connect jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM
+scan complete in 3ms
+Connecting to jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM
+Enter username for jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM: 
+Enter password for jdbc:hive2://172.31.19.14:10000/default;principal=hive/ip-172-31-19-14.eu-central-1.compute.internal@MOVIRI.COM: 
+Connected to: Apache Hive (version 1.1.0-cdh5.8.2)
+Driver: Hive JDBC (version 1.1.0-cdh5.8.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://172.31.19.14:10000/default> SHOW TABLES;
+INFO  : Compiling command(queryId=hive_20161117031010_0318249f-b506-411d-9d94-ae17f7275d68): SHOW TABLES
+INFO  : Semantic Analysis Completed
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20161117031010_0318249f-b506-411d-9d94-ae17f7275d68); Time taken: 0.049 seconds
+INFO  : Executing command(queryId=hive_20161117031010_0318249f-b506-411d-9d94-ae17f7275d68): SHOW TABLES
+INFO  : Starting task [Stage-0:DDL] in serial mode
+INFO  : Completed executing command(queryId=hive_20161117031010_0318249f-b506-411d-9d94-ae17f7275d68); Time taken: 0.12 seconds
+INFO  : OK
++------------+--+
+|  tab_name  |
++------------+--+
+| sample_07  |
++------------+--+
+1 row selected (0.291 seconds)
+```
