@@ -34,3 +34,9 @@ mysql> SHOW GRANTS FOR hive;
 +-----------------------------------------------------------------------------------------------------+
 2 rows in set (0.00 sec)
 ```
+
+
+Creating user directories in hdfs
+```
+
+```
