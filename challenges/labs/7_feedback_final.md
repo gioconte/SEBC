@@ -1,6 +1,6 @@
 - Describe the boot camp: was it useful, difficult, simple?
 
-The bootcamp was very useful and intense. I think all the major topics related do cloudera CDH are covered and that makes the bootcamp interesting and some parts are difficult
+The bootcamp was very useful and intense. I think all the major topics related to cloudera CDH are covered and that makes the bootcamp interesting and in some parts quite tricky
   
 - Which topic was least familiar to you? Which topic was most familiar?
 
