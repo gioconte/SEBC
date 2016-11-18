@@ -219,3 +219,68 @@ Common (RPMs)                                       129
 repolist: 18,501
 
 ```
+
+
+
+Creating user `bavaria` on all nodes
+
+```
+[root@ip-172-31-17-8 ec2-user]# useradd bavaria -u 2700
+[root@ip-172-31-17-8 ec2-user]# passwd bavaria
+Changing password for user bavaria.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+
+
+[root@ip-172-31-30-4 ec2-user]# useradd bavaria -u 2700
+[root@ip-172-31-30-4 ec2-user]# passwd bavaria
+Changing password for user bavaria.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-30-4 ec2-user]# 
+
+
+[root@ip-172-31-30-7 ec2-user]# useradd bavaria -u 2700
+[root@ip-172-31-30-7 ec2-user]# passwd bavaria
+Changing password for user bavaria.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-30-7 ec2-user]# 
+
+[root@ip-172-31-30-5 ec2-user]# useradd bavaria -u 2700
+[root@ip-172-31-30-5 ec2-user]# passwd bavaria
+Changing password for user bavaria.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+
+[root@ip-172-31-30-6 ec2-user]# useradd bavaria -u 2700
+[root@ip-172-31-30-6 ec2-user]# passwd bavaria
+Changing password for user bavaria.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+
+```
+
+
+Doing the same for user `saxony`
+
+```
+[root@ip-172-31-17-8 ec2-user]# useradd saxony -u 2800
+[root@ip-172-31-17-8 ec2-user]# passwd saxony
+Changing password for user saxony.
+New password: 
+BAD PASSWORD: it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+
+```
