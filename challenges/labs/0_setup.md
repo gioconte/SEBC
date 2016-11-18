@@ -283,4 +283,38 @@ BAD PASSWORD: it is based on a dictionary word
 Retype new password: 
 passwd: all authentication tokens updated successfully.
 
+
 ```
+
+
+
+Adding group `democratic` and add user `saxony` to it:
+
+```
+[root@ip-172-31-17-8 ec2-user]# groupadd democratic
+[root@ip-172-31-17-8 ec2-user]# usermod -a -G democratic saxony
+
+[root@ip-172-31-30-4 ec2-user]# groupadd democratic
+[root@ip-172-31-30-4 ec2-user]# usermod -a -G democratic saxony
+
+[root@ip-172-31-30-7 ec2-user]# groupadd democratic
+[root@ip-172-31-30-7 ec2-user]# usermod -a -G democratic saxony
+
+[root@ip-172-31-30-5 ec2-user]# groupadd democratic
+[root@ip-172-31-30-5 ec2-user]# usermod -a -G democratic saxony
+
+[root@ip-172-31-30-6 ec2-user]# groupadd democratic
+[root@ip-172-31-30-6 ec2-user]# usermod -a -G democratic saxony
+
+```
+
+
+Doing the same for `social` and `bavaria` (on all nodes):
+
+
+```
+[root@ip-172-31-17-8 ec2-user]# groupadd social
+[root@ip-172-31-17-8 ec2-user]# usermod -a -G social bavaria
+
+```
+
