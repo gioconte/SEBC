@@ -318,3 +318,73 @@ Doing the same for `social` and `bavaria` (on all nodes):
 
 ```
 
+
+Checking `/etc/passw` for both `bavaria` and `saxony`:
+
+
+```
+[root@ip-172-31-17-8 ec2-user]# cat /etc/passwd | grep bavaria
+bavaria:x:2700:2700::/home/bavaria:/bin/bash
+[root@ip-172-31-17-8 ec2-user]# cat /etc/passwd | grep saxony
+saxony:x:2800:2800::/home/saxony:/bin/bash
+
+[root@ip-172-31-17-8 ec2-user]# cat /etc/group | grep bavaria
+bavaria:x:2700:
+social:x:2802:bavaria
+
+[root@ip-172-31-30-4 ec2-user]# cat /etc/passwd | grep bavaria
+bavaria:x:2700:2700::/home/bavaria:/bin/bash
+[root@ip-172-31-30-4 ec2-user]# cat /etc/passwd | grep saxony
+saxony:x:2800:2800::/home/saxony:/bin/bash
+
+[root@ip-172-31-30-7 ec2-user]# cat /etc/passwd | grep bavaria
+bavaria:x:2700:2700::/home/bavaria:/bin/bash
+[root@ip-172-31-30-7 ec2-user]# cat /etc/passwd | grep saxony
+saxony:x:2800:2800::/home/saxony:/bin/bash
+
+[root@ip-172-31-30-5 ec2-user]# cat /etc/passwd | grep bavaria
+bavaria:x:2700:2700::/home/bavaria:/bin/bash
+[root@ip-172-31-30-5 ec2-user]# cat /etc/passwd | grep saxony
+saxony:x:2800:2800::/home/saxony:/bin/bash
+
+[root@ip-172-31-30-6 ec2-user]# cat /etc/passwd | grep bavaria
+bavaria:x:2700:2700::/home/bavaria:/bin/bash
+[root@ip-172-31-30-6 ec2-user]# cat /etc/passwd | grep saxony
+saxony:x:2800:2800::/home/saxony:/bin/bash
+
+
+```
+
+Checking `/etc/group` for both `democratic` adn `social`
+
+
+```
+[root@ip-172-31-17-8 ec2-user]# cat /etc/group | grep democratic
+democratic:x:2801:saxony
+[root@ip-172-31-17-8 ec2-user]# cat /etc/group | grep social
+social:x:2802:bavaria
+
+[root@ip-172-31-30-4 ec2-user]# cat /etc/group | grep democratic
+democratic:x:2801:saxony
+[root@ip-172-31-30-4 ec2-user]# cat /etc/group | grep social
+social:x:2802:bavaria
+
+[root@ip-172-31-30-7 ec2-user]# cat /etc/group | grep democratic
+democratic:x:2801:saxony
+[root@ip-172-31-30-7 ec2-user]# cat /etc/group | grep social
+social:x:2802:bavaria
+
+
+[root@ip-172-31-30-5 ec2-user]# cat /etc/group | grep democratic
+democratic:x:2801:saxony
+[root@ip-172-31-30-5 ec2-user]# cat /etc/group | grep social
+social:x:2802:bavaria
+
+
+[root@ip-172-31-30-6 ec2-user]# cat /etc/group | grep democratic
+democratic:x:2801:saxony
+[root@ip-172-31-30-6 ec2-user]# cat /etc/group | grep social
+social:x:2802:bavaria
+
+```
+
