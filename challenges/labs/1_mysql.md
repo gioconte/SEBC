@@ -291,9 +291,17 @@ sql_mode=STRICT_ALL_TABLES
 Starting MySQL server:
 ```
 [root@ip-172-31-17-8 tmp]# service mysqld start
-Initializing MySQL database:  2016-11-18 03:43:06 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
-2016-11-18 03:43:06 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
-2016-11-18 03:43:06 0 [Note] Ignoring --secure-file-priv value as server is running with --bootstrap.
+Initializing MySQL database:  2016-11-18 03:43:06 0 [Warning] Using unique option prefix 
+
+key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. 
+
+Please use the full name instead.
+2016-11-18 03:43:06 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use 
+
+--explicit_defaults_for_timestamp server option (see documentation for more details).
+2016-11-18 03:43:06 0 [Note] Ignoring --secure-file-priv value as server is running with --
+
+bootstrap.
 2016-11-18 03:43:06 0 [Note] /usr/sbin/mysqld (mysqld 5.6.34-log) starting as process 24736 ...
 2016-11-18 03:43:06 24736 [Note] InnoDB: Using atomics to ref count buffer pool pages
 2016-11-18 03:43:06 24736 [Note] InnoDB: The InnoDB memory heap is disabled
@@ -304,7 +312,9 @@ Initializing MySQL database:  2016-11-18 03:43:06 0 [Warning] Using unique optio
 2016-11-18 03:43:06 24736 [Note] InnoDB: Using CPU crc32 instructions
 2016-11-18 03:43:06 24736 [Note] InnoDB: Initializing buffer pool, size = 4.0G
 2016-11-18 03:43:07 24736 [Note] InnoDB: Completed initialization of buffer pool
-2016-11-18 03:43:07 24736 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: a new database to be created!
+2016-11-18 03:43:07 24736 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: 
+
+a new database to be created!
 2016-11-18 03:43:07 24736 [Note] InnoDB: Setting file ./ibdata1 size to 12 MB
 2016-11-18 03:43:07 24736 [Note] InnoDB: Database physically writes the file full: wait...
 2016-11-18 03:43:09 24736 [Note] InnoDB: Setting log file ./ib_logfile101 size to 512 MB
@@ -328,9 +338,17 @@ InnoDB: Progress in MB: 100 200 300 400 500
 2016-11-18 03:45:59 24736 [Note] InnoDB: Shutdown completed; log sequence number 1625977
 
 
-2016-11-18 03:45:59 0 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
-2016-11-18 03:45:59 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
-2016-11-18 03:45:59 0 [Note] Ignoring --secure-file-priv value as server is running with --bootstrap.
+2016-11-18 03:45:59 0 [Warning] Using unique option prefix key_buffer instead of 
+
+key_buffer_size is deprecated and will be removed in a future release. Please use the full name 
+
+instead.
+2016-11-18 03:45:59 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use 
+
+--explicit_defaults_for_timestamp server option (see documentation for more details).
+2016-11-18 03:45:59 0 [Note] Ignoring --secure-file-priv value as server is running with --
+
+bootstrap.
 2016-11-18 03:45:59 0 [Note] /usr/sbin/mysqld (mysqld 5.6.34-log) starting as process 24762 ...
 2016-11-18 03:45:59 24762 [Note] InnoDB: Using atomics to ref count buffer pool pages
 2016-11-18 03:45:59 24762 [Note] InnoDB: The InnoDB memory heap is disabled
@@ -357,7 +375,9 @@ PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
 To do so, start the server, then issue the following commands:
 
   /usr/bin/mysqladmin -u root password 'new-password'
-  /usr/bin/mysqladmin -u root -h ip-172-31-17-8.eu-central-1.compute.internal password 'new-password'
+  /usr/bin/mysqladmin -u root -h ip-172-31-17-8.eu-central-1.compute.internal password 'new-
+
+password'
 
 Alternatively you can run:
 
@@ -392,7 +412,7 @@ Starting mysqld:
 
 Adding secure installation and removing test tables:
 
-
+```
 [root@ip-172-31-17-8 tmp]# /usr/bin/mysql_secure_installation
 
 
@@ -463,7 +483,7 @@ Thanks for using MySQL!
 Cleaning up...
 ```
 
-```
+
 
 
 Installing JDBC Connector on all nodes:
@@ -947,5 +967,96 @@ bin.jar /usr/share/java/mysql-connector-java.jar
 
 ```
 
+
+Creating Database requested:
+
+```
+[root@ip-172-31-17-8 tmp]# mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 5.6.34-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database scm DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create database rman DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create database hive DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create database oozie DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create database hue DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> 
+mysql> 
+mysql> create database sentry DEFAULT CHARACTER SET utf8;
+Query OK, 1 row affected (0.00 sec)
+```
+
+
+Showing Mysql version
+
+```
+[root@ip-172-31-17-8 tmp]# mysql --version
+mysql  Ver 14.14 Distrib 5.6.34, for Linux (x86_64) using  EditLine wrapper
+
+```
+
+Showing list of databases and grants
+
+
+```
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| hive               |
+| hue                |
+| mysql              |
+| oozie              |
+| performance_schema |
+| rman               |
+| scm                |
+| sentry             |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> show grants;
++----------------------------------------------------------------------------------------------
+
+------------------------------------------+
+| Grants for root@localhost                                                                     
+
+                                         |
++----------------------------------------------------------------------------------------------
+
+------------------------------------------+
+| GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY PASSWORD 
+
+'*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19' WITH GRANT OPTION |
+| GRANT PROXY ON ''@'' TO 'root'@'localhost' WITH GRANT OPTION                                  
+
+                                         |
++----------------------------------------------------------------------------------------------
+
+------------------------------------------+
+2 rows in set (0.00 sec)
+
+
+```
 
 
