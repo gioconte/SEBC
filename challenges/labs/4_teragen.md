@@ -112,3 +112,34 @@ Found 5 items
 -rw-r--r--   3 bavaria supergroup 1280000000 2016-11-18 05:57 /user/bavaria/tgen512m/part-m-00003
 
 ```
+
+Number of blocks `Total blocks (validated):	308 (avg. block size 16623376 B)`
+
+```
+[bavaria@ip-172-31-30-5 tmp]$ hadoop fsck /user/bavaria/tgen512m
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+Connecting to namenode via http://ip-172-31-17-8.eu-central-1.compute.internal:50070
+FSCK started by bavaria (auth:SIMPLE) from /172.31.30.5 for path /user/bavaria/tgen512m at Fri Nov 18 05:59:15 EST 2016
+.....Status: HEALTHY
+ Total size:	5120000000 B
+ Total dirs:	1
+ Total files:	5
+ Total symlinks:		0
+ Total blocks (validated):	308 (avg. block size 16623376 B)
+ Minimally replicated blocks:	308 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Number of data-nodes:		3
+ Number of racks:		1
+FSCK ended at Fri Nov 18 05:59:15 EST 2016 in 6 milliseconds
+
+
+The filesystem under path '/user/bavaria/tgen512m' is HEALTHY
+```
