@@ -98,3 +98,17 @@ sys	0m0.357s
 
 
 ```
+
+
+dfs ls command
+
+```
+[bavaria@ip-172-31-30-5 tmp]$ hdfs dfs -ls /user/bavaria/tgen512m
+Found 5 items
+-rw-r--r--   3 bavaria supergroup          0 2016-11-18 05:57 /user/bavaria/tgen512m/_SUCCESS
+-rw-r--r--   3 bavaria supergroup 1280000000 2016-11-18 05:57 /user/bavaria/tgen512m/part-m-00000
+-rw-r--r--   3 bavaria supergroup 1280000000 2016-11-18 05:57 /user/bavaria/tgen512m/part-m-00001
+-rw-r--r--   3 bavaria supergroup 1280000000 2016-11-18 05:57 /user/bavaria/tgen512m/part-m-00002
+-rw-r--r--   3 bavaria supergroup 1280000000 2016-11-18 05:57 /user/bavaria/tgen512m/part-m-00003
+
+```
