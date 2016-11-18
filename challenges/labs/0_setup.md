@@ -328,10 +328,6 @@ bavaria:x:2700:2700::/home/bavaria:/bin/bash
 [root@ip-172-31-17-8 ec2-user]# cat /etc/passwd | grep saxony
 saxony:x:2800:2800::/home/saxony:/bin/bash
 
-[root@ip-172-31-17-8 ec2-user]# cat /etc/group | grep bavaria
-bavaria:x:2700:
-social:x:2802:bavaria
-
 [root@ip-172-31-30-4 ec2-user]# cat /etc/passwd | grep bavaria
 bavaria:x:2700:2700::/home/bavaria:/bin/bash
 [root@ip-172-31-30-4 ec2-user]# cat /etc/passwd | grep saxony
